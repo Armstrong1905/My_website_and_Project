@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/9b71c21fca.js" crossorigin="anonymous"></script>
+</head>
+<style>
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.page{
+    width: 100%;
+    height: 70vh;
+    background-color: rgb(62, 194, 246);
+}
+.navBar{
+    display: flex;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 10vh;
+    background-color: transparent;
+}
+.navBar img{
+    position: absolute;
+    height: 30px;
+    padding: 10px;
+    margin-left: 2%;
+    
+}
+.navBar ul li{
+    display: flex;
+    position: absolute;
+    font-style: none;
+    margin-left: 15%;
+    margin-top: -8px;
+}
+.navBar ul li a{
+    text-decoration: none;
+    margin: 3%;
+    color: black;
+}
+.navBar ul li a.active{
+    text-decoration: underline;
+}
+.navBar ul li a:hover{
+    text-decoration: underline;
+}
+
+.font{
+    display: flex;
+    align-items: center;
+    margin-left: 80%;
+    gap: 20px;
+}
+.fa-solid.fa-magnifying-glass:hover{
+    color: rgb(47, 45, 45);
+}
+.fa-solid.fa-cart-shopping:hover{
+    color: rgb(47, 45, 45);
+}
+.fa-solid.fa-list:hover{
+    color: rgb(47, 45, 45);
+}
+
+.NikeInfo{
+    position: absolute;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+.NikeInfo p{
+    font-size: 12px;
+}
+.NikeInfo pre{
+    position: relative;
+    left: -31%;
+    font-size: 12px;
+    margin-top: -3%;
+}
+.NikeInfo h2{
+    margin-top: -4%;
+    word-spacing: 5px;
+}
+.NikeInfo a{
+    background-color: black;
+    text-align: center;
+    text-decoration: none;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 30%;
+    padding: 5px;
+    transition: 0.25s ease;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.NikeInfo a span{
+    text-align: center;
+    color: white;
+    font-size: 13px;
+}
+
+.NikeInfo a:hover{
+    background-color: rgba(0, 0, 0, 0.761);
+}
+
+.shoeImg{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 30%;
+    margin-top: 5%;
+    
+}
+.imgs{
+    text-align: center;
+}
+.imgs img{
+    height: 200px;
+    width: 90%;
+    background-color: rgb(222, 207, 207);
+    border-radius: 10px;
+    background-color: transparent;
+}
+.imgs h3{
+    margin-top: -3%;
+}
+.imgs p{
+    margin-top: -7%;
+    font-weight: lighter;
+}
+.imgs:hover{
+    transform: translateY(-15px);
+}
+
+</style>
+<body>
+    <div class="page">
+        <div class="navBar">
+            <img src="images/nike.png">
+            <ul type="none">
+                <li>
+                    <a href="#" class="active">HOME</a>
+                    <a href="#">MEN</a>
+                    <a href="#">WOMEN</a>
+                    <a href="#">COLLECTION</a>
+                    <a href="#">CONTACT</a>
+                </li>
+            </ul>
+            <div class="font">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-list"></i> 
+            </div>
+        </div>
+
+        <div class="NikeInfo">
+            <p>Explore Limited Edition</p>
+            <h2>NIKE LIMITED<br>
+                EDITION
+            </h2>
+
+            <pre>
+                Unleash the extraordinary. Elevate
+                your game with Nike's Limited
+                Edition. Where innovation meets
+                style, leaving a lasting mark. Just
+                do it.
+            </pre>
+            <a href="#"><span>SHOP NOW</span></a>
+        </div>
+
+        <div class="shoeImg">
+            <div class="imgs">
+               <img src="images/pngwingnikeShoe.com.png">
+               <h3>Nike Air</h3>
+               <p>Mens's Shoe</p>
+               <p>Colour: Red</p>
+               <p>Price: $70.00</p>
+            </div>
+
+            <div class="imgs">
+              <img src="images/pngwingnikeshoe33.com (1).png">
+              <h3>Nike Air</h3>
+              <p>Mens's Shoe</p>
+              <p>Colour: White</p>
+              <p>Price: $55.00</p>
+            </div>
+
+            <div class="imgs">
+              <img src="images/pngwingnike shoe2.com.png">
+              <h3>Nike Air</h3>
+              <p>Mens's Shoe</p>
+              <p>Colour: White</p>
+              <p>Price: $150.00</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

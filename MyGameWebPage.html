@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/9b71c21fca.js" crossorigin="anonymous"></script>
+</head>
+<style>
+.webpag{
+    margin-left: 21%;
+    width: 80%;
+    background-color: hsl(263, 87%, 12%);
+    overflow: hidden;
+}
+
+.navbar{
+    background-color: hsl(263, 87%, 12%);
+    height: 11vh;
+}
+
+.navList li{
+    display: flex;
+    margin-left: 10%;
+    gap: 15px;
+    font-style: none;
+    margin-top: 2.3%;
+}
+.navList li a{
+    text-decoration: none;
+    color: rgb(205, 198, 198);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 3px 6px;
+}
+.navList li a:hover{
+    background-color: rgb(99, 99, 231);
+    color: white;
+}
+.serachbar{
+    position: absolute;
+    margin-left: 55%;
+    margin-top: 1.7%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.searchBar{
+    padding: 3px;
+    border: none;
+    outline: none;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    cursor: pointer;
+    font-weight: lighter;
+}
+.searchBtn{
+    background-color: hsl(240, 90%, 58%);
+    margin-left: -2%;
+    color: white;
+    font-size: 13px;
+    border: 2px solid;
+    transition: 0.3s ease;
+}
+.searchBtn:hover{
+    background-color: rgb(21, 21, 150);
+}
+.searchBtn:active{
+    border-color: rgb(21, 21, 150);
+}
+
+.sideBar{
+    border-right: 2px solid;
+    border-color: hsl(263, 87%, 12%);
+    position: fixed;
+    display: block;
+    background-color: black;
+    width: 20%;
+    height: 100vh;
+}
+.logoName{
+    display: inline-flex;
+    
+}
+.logo{
+    padding: 5px;
+    margin-left: 2%;
+    margin-top: 6%;
+    
+}
+.gameTittle{
+    position: absolute;
+    margin-top: 10%;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.sideList{
+    font-style: none;
+    margin-left: -10%;
+}
+.sideList li a{
+    display: block;
+    text-decoration: none;
+    margin-bottom: 20px;
+    color: rgb(125, 122, 122);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    padding: 5px;
+    width: 80%;
+    text-overflow: hidden;
+    transition: 0.3s ease;
+}
+.sideList li a:hover{
+    background-color: rgb(56, 56, 56);
+    color: rgb(246, 243, 243);
+    font-weight: bold;
+}
+.fa-solid.fa-house.fa-xl{
+    color: rgb(223, 215, 215);
+}
+.fa-solid.fa-cart-shopping.fa-xl{
+    color: rgb(211, 207, 207);
+}
+.fa-solid.fa-list.fa-xl{
+    color: rgb(221, 221, 221);
+}
+.fa-solid.fa-user-group.fa-xl{
+    color: rgb(227, 226, 226);
+}
+.fa-solid.fa-wifi.fa-xl{
+    color: rgb(222, 222, 222);
+}
+.sideListDown{
+    margin-top: 5%;
+    font-style: none;
+    margin-left: -10%;
+}
+.sideListDown li a{
+    display: block;
+    text-decoration: none;
+    color: rgb(125, 122, 122);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    padding: 5px;
+    width: 80%;
+    text-overflow: hidden;
+    transition: 0.3s ease;
+}
+.sideListDown li a:hover{
+    background-color: rgb(56, 56, 56);
+    color: white;
+    font-weight: bold;
+}
+.fa-solid.fa-download.fa-xl{
+    color: rgb(224, 224, 224);
+}
+
+.fa-solid.fa-gear.fa-xl{
+    color: rgb(226, 224, 224);
+}
+.fa-solid.fa-circle-user.fa-xl{
+    color: rgb(219, 217, 217);
+}
+.main{
+    position: relative;
+}
+
+.images{
+    width: 100%;
+    height: 70vh;
+    border-radius: 10px;
+    border: 2px solid;
+}
+.imageText{
+    position: absolute;
+    margin-top: -15%;
+    color: rgb(255, 255, 255);
+    margin-left: 3%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+.EaLink{
+    display: flex;
+    position: absolute;
+    margin-top: -7%;
+    margin-left: 70%;
+    gap: 30px; 
+}
+.eaLinks{
+    border: 2px solid;
+    color: rgb(17, 16, 16);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 12px;
+    background-color:  greenyellow;
+    border-color: greenyellow;
+    box-shadow: 0px 0px 30px greenyellow;
+    
+}
+.eaLinks:hover{
+    background-color: rgb(166, 235, 63);
+    animation: glowBuy 2s infinite;
+}
+@keyframes glowBuy{
+  50%{
+    transform: scale(1.5);
+  }
+}
+
+
+.eaLink{
+    border: 2px solid;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 7px;
+    font-size: 12px;
+    background-color: black;
+    border-color: greenyellow;
+}
+.eaLink:hover{
+    background-color: greenyellow;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0px 0px 30px greenyellow;
+}
+.gamesImages{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 5px;
+    gap: 15px;
+   
+}
+.games{
+    background-color: rgb(9, 39, 103);
+    border-radius: 10px;
+}
+.games img{
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.games:hover{
+    box-shadow: 0px 0px 15px rgb(255, 0, 0);
+    transform: translateY(-5px);
+}
+.textBackground{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -7%;
+    text-align: center;
+}
+.textBackground h3{
+    color: white;
+    
+}
+.textBackground p{
+    color: white;
+    margin-top: -8%;
+}
+.textBackground p a{
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 15px;
+    padding: 2px 5px;
+    color: rgb(3, 3, 3);
+    border-color: rgb(16, 159, 45);
+    background-color: rgb(34, 201, 4);
+}
+.textBackground p a:hover{
+    box-shadow: 0px 0px 20px yellow;
+}
+b{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 2%;
+}
+
+
+.freeGame{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 5px;
+    gap: 15px;
+}
+.gamesFree{
+    background-color: rgb(9, 39, 103);
+    border-radius: 10px;
+}
+.gamesFree:hover{
+    box-shadow: 0px 0px 15px rgb(255, 0, 0);
+    transform: translateY(-5px);
+}
+.gamesFree img{
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.textSelect{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -7%;
+    text-align: center;
+}
+.textSelect h3{
+    color: white;
+}
+.textSelect p{
+    color: white;
+    margin-top: -8%;
+}
+.textSelect p a{
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 15px;
+    padding: 2px 5px;
+    color: rgb(3, 3, 3);
+    border-color: rgb(16, 159, 45);
+    background-color: rgb(34, 201, 4);
+}
+.textSelect p a:hover{
+    box-shadow: 0px 0px 20px yellow;
+}
+.whyChoose{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.whybox{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.competitive{
+    text-align: center;
+    border: 2px solid;
+    height: 200px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: hsla(0, 0%, 0%, 0.671);
+    cursor: pointer;
+}
+.competitive i{
+    margin-top: 15%;
+    color: white;
+}
+.competitive p{
+    color: rgb(16, 226, 153);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.competitive:hover{
+    box-shadow: 0px 0px 10px rgb(103, 103, 228);
+    transform: translateY(5px);
+}
+.aboutMe{
+    display: flex;
+    text-align: center;
+    gap: 10%;
+    margin-top: 6%;
+    padding: 10px;
+}
+.glowGaming{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+.glowGaming h3{
+    color: white;
+}
+.glowGaming p{
+    color: rgb(16, 226, 153);
+}
+.quickLinks{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+.quickLinks h3{
+    color: white;
+}
+.quickLinks a{
+    text-decoration: none;
+    color: rgb(16, 226, 153);
+}
+.quickLinks a:hover{
+    text-decoration: underline;
+}
+.contact{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+
+}
+.contact h3{
+    color: white;
+}
+.contact p{
+    color: rgb(16, 226, 153);
+
+}
+.navList a.active{
+    background-color: rgb(130, 130, 241);
+    color: white;
+}
+.sideList a.active{
+    background-color: rgb(69, 67, 67);
+    font-weight: bold;
+    color: white;
+}
+
+</style>
+<body>
+
+    <div class="sideBar">
+             <image src="images/game.logo.jpg" height="30px" class="logo"><span class="gameTittle">Arms Game Hub.com</span></image>
+                
+                <hr>
+            <ul type="none" class="sideList">
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-house fa-xl"></i>    Home</a>
+
+                    <a href="#" class="active">
+                        <i class="fa-solid fa-cart-shopping fa-xl"></i>    Store</a>
+
+                    <a href="#">
+                        <i class="fa-solid fa-list fa-xl"></i>    Libery</a>
+
+                    <a href="#">
+                        <i class="fa-solid fa-user-group fa-xl"></i>    Friends</a>
+
+                    <a href="#">
+                        <i class="fa-solid fa-wifi fa-xl"></i>     Live</a>
+                </li>
+            </ul><br><br><br><br><br><br><br><br>
+
+            <ul type="none" class="sideListDown">
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-download fa-xl"></i>    Downloads</a>
+
+                    <a href="#">
+                        <i class="fa-solid fa-gear fa-xl"></i>   Settings</a>
+
+                     <a href="#">
+                        <i class="fa-solid fa-circle-user fa-xl"></i>   Sign In</a>
+                </li>
+            </ul>
+        </div>
+
+    <div class="webpag">
+        <div class="header">
+        <div class="navbar">
+            <div class="logoName">
+           
+                <ul type="none" class="navList">
+                    <li>
+                        <a href="#">Discover</a>
+                        <a href="#" class="active">Browse</a>
+                        <a href="#">Wishlist</a>
+                    </li>
+                </ul>
+                <div class="serachbar">
+                    <input type="serach" class="searchBar">
+                    <button type="button" class="searchBtn">Search</button>
+                </div>
+               
+            </div>
+        </div>
+        </div>
+    
+
+        
+
+        
+
+        <main class="main">
+            <image src="images/ea-sports-fc-26-xbox-one-xbox-series-x-s-microsoft-store-cover.jpg" class="images"></image>
+            <div class="imageText">
+                The Club is Yours. Play EA SPORTS FC 26
+                now,<br> with an overhauled gameplay
+                experience powered by<br> community feedback,
+                Manager Live Challenges that
+                bring<br> fresh scenarios to the new season, and
+                Archetypes inspired by greats of the game.
+
+            </div>
+            <div class="EaLink">
+                <a href="" class="eaLinks">Buy Now</a>
+                <a href="" class="eaLink">Watch Trailer</a>
+            </div><br>
+
+            <b>Games On Sales</b><br><br>
+            <div class="gamesImages">
+                <div class="games">
+                   <img src="images/gta 6.webp">
+                   <div class="textBackground">
+                     <h3>GrandTheft Auto 6</h3>
+                     <p>
+                        Action - adventure<br><br>
+                       <a href="">
+                         Buy $$$
+                       </a>
+                     </p>
+                  </div>
+                </div>
+
+                <div class="games">
+                    <img src="images/splitfiction.webp">
+                   <div class="textBackground">
+                     <h3>Split Fiction</h3>
+                     <p>
+                        Co-op - adventure<br><br>
+                       <a href="">
+                         Buy $49.99
+                       </a>
+                     </p>
+                  </div>
+                </div>
+
+                <div class="games">
+                    <img src="images/ea-sports-fc-26-xbox-one-xbox-series-x-s-microsoft-store-cover.jpg">
+                   <div class="textBackground">
+                     <h3>EA Sports FC 26</h3>
+                     <p>
+                        Multiplayer - Sports<br><br>
+                       <a href="">
+                         Buy $69.99
+                       </a>
+                     </p>
+                  </div>
+                </div>
+
+                <div class="games">
+                    <img src="images/blackmyth.jpg">
+                   <div class="textBackground">
+                     <h3>Black Myth Wukong</h3>
+                     <p>
+                         Action - adventure<br><br>
+                       <a href="">
+                         Buy $69.99
+                       </a>
+                     </p>
+                  </div>
+                </div>
+
+            </div><br>
+            <b>Free to play</b><br><br>
+
+            <div class="freeGame">
+                <div class="gamesFree">
+                    <img src="images/uncharted.jpg">
+                    <div class="textSelect">
+                        <h3>Uncharted 4</h3>
+                        <p>
+                            Action - adventure<br><br>
+                            <a href="">
+                                Play For free
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gamesFree">
+                    <img src="images/resident evil.jpg">
+                    <div class="textSelect">
+                        <h3>Resident Evil 7</h3>
+                        <p>
+                            Horror - Action - adventure<br><br>
+                            <a href="">
+                                Play For free
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gamesFree">
+                    <img src="images/god-of-war-pc-game-steam-latin-america-cover.jpg">
+                    <div class="textSelect">
+                        <h3>God Of War</h3>
+                        <p>
+                            Action - adventure<br><br>
+                            <a href="">
+                                Play For free
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gamesFree">
+                    <img src="images/lust of us 2.webp">
+                    <div class="textSelect">
+                        <h3>Last Of Us II</h3>
+                        <p>
+                            Action - adventure<br><br>
+                            <a href="">
+                                Play For free
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gamesFree">
+                    <img src="images/call of duty.jpg">
+                    <div class="textSelect">
+                        <h3>Call Of Duty MW 3</h3>
+                        <p>
+                            Action - Acade<br><br>
+                            <a href="">
+                                Play For free
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gamesFree">
+                    <img src="images/battlefield 6.png">
+                    <div class="textSelect">
+                        <h3>battlefield 6</h3>
+                        <p>
+                            Action - Acade<br><br>
+                            <a href="">
+                                Play For free
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gamesFree">
+                    <img src="images/GTA V.jpg">
+                    <div class="textSelect">
+                        <h3>GrandTheft Auto 5</h3>
+                        <p>
+                            Action - adventure<br><br>
+                            <a href="">
+                                Play For free
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gamesFree">
+                    <img src="images/The_Last_of_Us_Part_I_cover.jpg">
+                    <div class="textSelect">
+                        <h3>Last Of Us I</h3>
+                        <p>
+                            Action - adventure<br><br>
+                            <a href="">
+                                Play For free
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gamesFree">
+                    <img src="images/nba 2k 25.avif">
+                    <div class="textSelect">
+                        <h3>NBA 2K 25</h3>
+                        <p>
+                            Multiplayer - Sports<br><br>
+                            <a href="">
+                                Play For free
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gamesFree">
+                    <img src="images/hellblade 2.jpg">
+                    <div class="textSelect">
+                        <h3>HellBlade II</h3>
+                        <p>
+                            Action - adventure<br><br>
+                            <a href="">
+                                Play For free
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gamesFree">
+                    <img src="images/eFootball-2026.jpg">
+                    <div class="textSelect">
+                        <h3>eFootball-2026</h3>
+                        <p>
+                            Multiplayer - Sports<br><br>
+                            <a href="">
+                                Play For free
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gamesFree">
+                    <img src="images/forza 5.jpg">
+                    <div class="textSelect">
+                        <h3>eFootball-2026</h3>
+                        <p>
+                            Acade - Racing<br><br>
+                            <a href="">
+                                Play For free
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+        </main><br>
+
+
+        <footer>
+
+            <h3 class="whyChoose">Why Choose Us?</h3><br>
+
+            <div class="whybox">
+                <div class="competitive">
+                    <i class="fa-solid fa-trophy fa-2xl"></i><br><br>
+                    <b>competitive Tournaments</b>
+                    <p>Join thrilling tournaments and win
+                    amazing prizes</p>
+                </div>
+
+                <div class="competitive">
+                    <i class="fa-solid fa-user-group fa-2xl"></i><br><br>
+                    <b>Active Community</b>
+                    <p>Connect with gamers worldwide
+                    and make new friends</p>
+                </div>
+
+                <div class="competitive">
+                    <i class="fa-solid fa-gamepad fa-2xl"></i><br><br>
+                    <b>Exclusive Content</b>
+                    <p>Access premium guides tips, and
+                      strategies</p>
+                </div>
+            </div><br><br>
+
+            <div class="aboutMe">
+                    <div class="glowGaming">
+                        <h3>Arms Game Hub.com</h3>
+                        <p>Your ultimate for competitive
+                            gaming
+                        </p>
+                    </div>
+
+                    <div class="quickLinks">
+                        <h3>Quick Links</h3>
+                        <ul type="none">
+                            <il>
+                                <a href="#">Features</a><br>
+                                <a href="#">Games</a>
+                                <a href="#">About</a>
+                            </il>
+                        </ul>
+                    </div>
+
+                    <div class="contact">
+                        <h3>Contact</h3>
+                        <p> Suame - Kumasi<br>
+                            (+233) 545-7886-92
+                            majidseidu1905@gmail.com
+                        </p>
+                    </div>
+                </div>
+
+        </footer>
+    </div>
+</body>
+</html>

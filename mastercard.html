@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.container{
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+.mastercardFront{
+    background-color: black;
+    width: 320px;
+    height: 170px;
+    margin-bottom: 10%;
+    border-radius: 20px;
+    border: 2px solid;
+}
+.mastercardBack{
+    background-color: black;
+    width: 320px;
+    height: 180px;
+    border-radius: 20px;
+    border: 1px solid;
+}
+.logoText{
+    display: flex;
+    padding: 20px;
+    gap: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.logoText span{
+    color: white;
+    margin-top: 0.5%;
+    font-weight: lighter;
+
+}
+.chip{
+    margin-left: 33%;
+    width: 35px;
+    height: 22px;
+}
+.cardNumber{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 7%;
+}
+.cardNumber p{
+    font-size: 12px;
+    font-weight: lighter;
+}
+.cardNumber span{
+    position: absolute;
+    margin-top: -3%;
+}
+.name{
+    display: flex;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 7%;
+}
+.name p{
+    font-weight: lighter;
+    font-size: 13px;
+}
+.name h6{
+    margin-left: 43%;
+    margin-top: -0.2%;
+    font-weight: lighter;
+}
+.text1{
+    position: absolute;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.none{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 98.8%;
+    height: 4.5vh;
+    margin-top: 12%;
+}
+.hidden{
+    display: flex;
+    background-color: rgb(201, 200, 199);
+    width: 70%;
+    height: 4vh;
+    border-radius: 5px;
+    margin-top: 22%;
+    margin-left: 5%;
+}
+.hidden p{
+    font-style: italic;
+    color: rgb(12, 11, 11);
+    margin-left: 100%;
+    height: 2.6vh;
+    margin-top: 2%;
+    background-color: rgb(251, 249, 249);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.mastercardBack pre{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 8px;
+    margin-top: 3%;
+    margin-left: -2%;
+}
+
+</style>
+<body>
+    <div class="container">
+
+    <div class="mastercardFront">
+        <div class="logoText">
+            <img src="images/logo-mastercard.svg" height="30px">
+            <span>Master Card</span>
+
+            <img src="images/mastercard chip.jpg" class="chip">
+        </div>
+        <div class="cardNumber">
+            <p>Card Number</p>
+            <span>0000 0000 0000 000</span>
+        </div><br>
+        <div class="name">
+            <p>Abdul Majid Seidu</p>
+            <h6>Valid Thru<br>
+                05/50
+            </h6>
+        </div>
+        
+    </div>
+
+    <div class="mastercardBack">
+        <span class="text1">For customer service call +233 545 7886 92 0r email at mastercard@gmail.com</span>
+        <div class="none"></div><br>
+        <div class="hidden">
+            <p>000</p>
+        </div>
+
+        <pre>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expeditaquaerat vel faci
+            lis illo ipsum incidunt nisi accusamus cum nequetenetur voluptatem ipsa, eius 
+            voluptas corporis ut debitis deleniti ipsam excepturi.
+        </pre>
+    </div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+h1{
+    text-align: center;
+    font-size: 10em;
+}
+.btns{
+    text-align: center;
+}
+.btn{
+    background-color: rgb(66, 66, 208);
+    color: white;
+    width: 20%;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.25 ease;
+}
+.btn:hover{
+    background-color: rgb(35, 35, 115);
+}
+
+</style>
+<body>
+    <h1 id="counter">0</h1>
+
+    <div class="btns">
+        <button id="decrease" class="btn">Decrease</button>
+        <button id="reset" class="btn">Reset</button>
+        <button id="increase" class="btn">Increase</button>
+    </div>
+
+    <script>
+
+        const counter = document.getElementById('counter');
+        const decrease = document.getElementById('decrease');
+        const reset = document.getElementById('reset');
+        const increase = document.getElementById('increase');
+
+        let count = 0;
+
+        decrease.onclick = function(){
+            count --;
+            counter.textContent = count;
+        }
+
+        reset.onclick = function(){
+            count = 0;
+            counter.textContent = count;
+        }
+
+        increase.onclick = function(){
+            count ++;
+            counter.textContent = count;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    text-align: center;
+}
+#myButton{
+    margin-top: 40%;
+    width: 20%;
+    padding: 5px;
+    background-color: rgb(122, 122, 233);
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    transition: 0.25 ease;
+    cursor: pointer;
+}
+#myButton:hover{
+    background-color: rgb(68, 68, 235);
+}
+#results{
+    font-size: 10em;
+}
+</style>
+<body>
+    <button id="myButton">Roll</button>
+    <h1 id="results"></h1>
+
+    <script>
+        const min = 1;
+        const max = 6;
+
+        let diceRolling;
+
+        document.getElementById('myButton').onclick = function(){
+
+            diceRolling = Math.floor(Math.random() * (max - min + 1)) + min;
+            results = document.getElementById('results').textContent = diceRolling;
+        }
+
+    </script>
+</body>
+</html>

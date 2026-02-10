@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+a{
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    position: relative;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a:hover{
+    animation: borderRotate 3s linear infinite;
+    background-color: rgb(89, 89, 230);
+    box-shadow: 0px 0px 10px white;
+    color: white;
+}
+a:before,
+a:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+        from var(--deg) at center,
+        blue,
+        yellow,
+        white,
+        blue,
+        blue,
+        blue,
+        blue,
+        blue,
+        blue,
+        blue
+    );
+    border-radius: inherit;
+    z-index: -2;
+    padding: 2px;
+}
+a::after{
+    filter: blur(5px);
+}
+
+@property --deg{
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: 0deg;
+}
+@keyframes borderRotate{
+    to{
+        --deg: 360deg;
+    }
+}
+
+</style>
+<body>
+    <a href="#">CLICK ME</a>
+</body>
+</html>
